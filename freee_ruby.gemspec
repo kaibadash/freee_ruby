@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Library for handling accounting software freee API in Ruby'
   spec.homepage      = 'https://github.com/KiyotakaMatsushita/freee_ruby'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
@@ -28,12 +28,25 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'yard'
   spec.add_development_dependency 'webmock'
 
-  spec.add_dependency 'oauth2'
-  spec.add_dependency 'faraday'
-  spec.add_dependency 'faraday_middleware'
+  spec.add_runtime_dependency('faraday')
+  spec.add_runtime_dependency('faraday_middleware')
+  spec.add_runtime_dependency('oauth2')
+
+  spec.add_runtime_dependency('concurrent-ruby')
+  spec.add_runtime_dependency('hash_diff')
+  spec.add_runtime_dependency('httparty')
+  spec.add_runtime_dependency('jwt')
+  spec.add_runtime_dependency('oj')
+  spec.add_runtime_dependency('openssl')
+  spec.add_runtime_dependency('securerandom')
+  spec.add_runtime_dependency('sorbet-runtime')
+
+  spec.add_development_dependency('activesupport')
+  spec.add_development_dependency('pry')
+  spec.add_development_dependency('rubocop')
+  spec.add_development_dependency('sorbet')
+  spec.add_development_dependency('tapioca')
+  spec.add_development_dependency('yard')
 end
