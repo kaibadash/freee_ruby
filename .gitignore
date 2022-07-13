@@ -9,3 +9,9 @@
 
 # rspec failure tracking
 .rspec_status
+
+*.sw?
+.DS_Store
+rdoc
+.ruby-version
+vendor/
