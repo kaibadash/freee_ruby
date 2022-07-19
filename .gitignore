@@ -13,5 +13,4 @@
 *.sw?
 .DS_Store
 rdoc
-.ruby-version
 vendor/
